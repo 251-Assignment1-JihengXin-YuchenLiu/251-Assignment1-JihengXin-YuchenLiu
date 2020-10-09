@@ -1,3 +1,17 @@
+import com.itextpdf.text.Document;
+import com.itextpdf.text.DocumentException;
+import com.itextpdf.text.PageSize;
+import com.itextpdf.text.Paragraph;
+import com.itextpdf.text.pdf.CMYKColor;
+import com.itextpdf.text.pdf.PdfContentByte;
+import com.itextpdf.text.pdf.PdfWriter;
+import org.apache.tika.exception.TikaException;
+import org.apache.tika.metadata.Metadata;
+import org.apache.tika.parser.ParseContext;
+import org.apache.tika.parser.odf.OpenDocumentParser;
+import org.apache.tika.sax.BodyContentHandler;
+import org.xml.sax.SAXException;
+
 import javax.print.*;
 import javax.print.attribute.DocAttributeSet;
 import javax.print.attribute.HashDocAttributeSet;
@@ -13,22 +27,22 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 
+
+
 public class Assignment extends JFrame implements DocumentListener {
 
     private static final long serialVersionUID = 1L;
-    JMenuBar menubar=new JMenuBar();
+    JFileChooser path;
+    JMenuBar toolbar=new JMenuBar();
     JMenu file=new JMenu("File");
     JMenu look =new JMenu("Search");
     JMenu view=new JMenu("View");
     JMenu help =new JMenu("Help");
-    Odt odt=new Odt();
     JTextArea wordarea=new JTextArea();
     JScrollPane imgScrollPane = new JScrollPane(wordarea);
-    String [] str1={"New","Open","Save","Print","Exit","PDF","odt"};
+    String [] str1={"New","Open","Save","Printor","Exit","PDF","odt"};
     String [] str2={"Cut","Copy","Paste","Search","T&D"};
     String [] str3={"About"};
-    Search s1=new Search();
-    Change c1=new Change();
     int flag=0;
     String source="";
     public static void main(String[] args) {
@@ -36,8 +50,6 @@ public class Assignment extends JFrame implements DocumentListener {
         Assignmet1.setVisible(true);
     }
     public Assignment(){
-        s1.set(wordarea);
-        c1.set(wordarea);
         setTitle("Test Editor");
         Toolkit kit = Toolkit.getDefaultToolkit();
         Dimension screenSize = kit.getScreenSize();
@@ -46,11 +58,11 @@ public class Assignment extends JFrame implements DocumentListener {
         add(imgScrollPane,BorderLayout.CENTER);
         Component textPane = null;
         JScrollPane scrollPane = new JScrollPane(textPane);
-        setJMenuBar(menubar);
-        menubar.add(file);
-        menubar.add(look);
-        menubar.add(view);
-        menubar.add(help);
+        setJMenuBar(toolbar);
+        toolbar.add(file);
+        toolbar.add(look);
+        toolbar.add(view);
+        toolbar.add(help);
         wordarea.getDocument().addDocumentListener(this);
         for(int i=0;i<str1.length;i++){
             JMenuItem item1= new JMenuItem(str1[i]);
@@ -146,7 +158,7 @@ public class Assignment extends JFrame implements DocumentListener {
         }
     }
 
-    void newfile(){
+    void file(){
         if(flag==0){
             wordarea.setText("");
         }
@@ -185,44 +197,80 @@ public class Assignment extends JFrame implements DocumentListener {
         }
     }
 
-//    void PDF() throws IOException, DocumentException {
-//            OutputStream outputStream = new FileOutputStream(new File("C:\\Users\\admin\\Desktop\\assignment1.pdf"));
-//            Document document=null;
-//            PdfWriter writer = PdfWriter.getInstance(document, outputStream);
-//            document.open();
-//            PdfContentByte cb = writer.getDirectContent();
-//            PdfContentByte canvas = writer.getDirectContent();
-//            Paragraph paragraphText1 = new Paragraph(wordarea.getText());
-//            document.add(paragraphText1);
-//            PdfContentByte cj = writer.getDirectContent();
-//            document.close();
-//    }
+    void PDF() throws IOException, DocumentException {
+        Document document = new Document(PageSize.A4);
+        OutputStream outputStream = new FileOutputStream(new File(String.valueOf(path.getSelectedFile().getAbsoluteFile())));
+        PdfWriter writer = PdfWriter.getInstance(document,outputStream);
+        document.open();
+        assert writer != null;
+        PdfContentByte canvas = writer.getDirectContent();
+        CMYKColor magentaColor = new CMYKColor(1.f, 1.f, 1.f, 1.f);
+        canvas.setColorStroke(magentaColor);
+        canvas.moveTo(document.left(), document.top() - 4);
+        canvas.lineTo(document.right(), document.top() - 4);
+        canvas.closePathStroke();
+        String content = wordarea.getText();
+        String[] StringList = content.split("\n");
+        for (String s : StringList) {
+            Paragraph paragraphText1 = new Paragraph(s);
+            try {
+                document.add(paragraphText1);
+            } catch (DocumentException e) {
+                e.printStackTrace();
+            }
+        }
+        document.close();
+    }
 
     void about(){
         JOptionPane.showMessageDialog(null,"The Test Editor is made by JihengXin and YuchenLiu.You can connect us by send email to 156125026@qq.com");
     }
 
-    void Printor(String fileName){
-        File file = new File(fileName);
-        PrintRequestAttributeSet pras = new HashPrintRequestAttributeSet();
-        DocFlavor flavor = DocFlavor.INPUT_STREAM.AUTOSENSE;
-        PrintService[] printService = PrintServiceLookup.lookupPrintServices(flavor, pras);
-        PrintService defaultService = PrintServiceLookup.lookupDefaultPrintService();
-        PrintService service = ServiceUI.printDialog(null, 200, 200, printService, defaultService, flavor, pras);
-        if (service != null) {
-            try {
-                DocPrintJob job = service.createPrintJob();
-                FileInputStream fis;
-                fis = new FileInputStream(file);
-                DocAttributeSet das = new HashDocAttributeSet();
-                Doc doc = new SimpleDoc(fis, flavor, das);
-                job.print(doc, pras);
-            } catch (Exception e) {
-                e.printStackTrace();
+
+    void dayin(){
+            PrintRequestAttributeSet pras = new HashPrintRequestAttributeSet();
+            DocFlavor flavor = DocFlavor.INPUT_STREAM.AUTOSENSE;
+            PrintService[] printService = PrintServiceLookup.lookupPrintServices(flavor, pras);
+            PrintService defaultService = PrintServiceLookup.lookupDefaultPrintService();
+            PrintService service = ServiceUI.printDialog(null, 200, 200, printService, defaultService, flavor, pras);
+            if (service != null) {
+                try {
+                    DocPrintJob job = service.createPrintJob();
+                    FileInputStream fis;
+                    PDF();
+                    fis = new FileInputStream(path.getSelectedFile().getAbsoluteFile());
+                    DocAttributeSet das = new HashDocAttributeSet();
+                    Doc doc = new SimpleDoc(fis, flavor, das);
+                    job.print(doc, pras);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
             }
         }
+
+
+    void odt() throws IOException, TikaException, SAXException {
+        BodyContentHandler handler = new BodyContentHandler();
+
+        Metadata metadata = new Metadata();
+        FileInputStream inputstream = new FileInputStream(new File(
+                "D:\\odt_file.odt"));
+        ParseContext pcontext = new ParseContext();
+
+        //Open Document Parser
+        OpenDocumentParser openofficeparser = new OpenDocumentParser ();
+
+        openofficeparser.parse(inputstream, handler, metadata,pcontext);
+        String out = "Contents of the document:" + handler.toString();
+        wordarea.setText(out);
+        String[] metadataNames = metadata.names();
+
+        for(String name : metadataNames) {
+            System.out.println(name + " :  " + metadata.get(name));
+        }
     }
-    class MyActionListener1 implements ActionListener{
+
+    class MyActionListener1 extends Component implements ActionListener{
         public void actionPerformed(ActionEvent e) {
             if(e.getSource()instanceof JMenuItem){
                 if(e.getActionCommand()=="Cut"){
@@ -234,9 +282,6 @@ public class Assignment extends JFrame implements DocumentListener {
                 if(e.getActionCommand()=="Paste"){
                     wordarea.paste();
                 }
-                if(e.getActionCommand()=="Search"){
-                    s1.setVisible(true);
-                }
                 if(e.getActionCommand()=="Open"){
                     open();
                 }
@@ -244,34 +289,36 @@ public class Assignment extends JFrame implements DocumentListener {
                     save();
                 }
                 if(e.getActionCommand()=="New"){
-                    newfile();
+                    file();
                 }
                 if(e.getActionCommand()=="Exit"){
                     exit();
                 }
-//                if(e.getActionCommand()=="Print"){
-//                    FileDialog filedialog;
-//                    Printor(filedialog.getFile());
-//                }
+                if(e.getActionCommand()=="Printor"){
+                    path = new JFileChooser();
+                    path.showDialog(this,"sever as a pdf");
+//                    File filename = filechoose.getSelectedFile().getAbsoluteFile();
+                    dayin();
+                }
                 if(e.getActionCommand()=="T&D"){
                     time();
                 }
                 if(e.getActionCommand()=="odt"){
                     try {
-                        odt.openOdt();
-                    } catch (Exception ex) {
+                        odt();
+                    } catch (IOException | TikaException | SAXException ex) {
                         ex.printStackTrace();
                     }
                 }
-//                if(e.getActionCommand()=="PDF"){
-//                    try {
-//                        PDF();
-//                    } catch (IOException ex) {
-//                        ex.printStackTrace();
-//                    } catch (DocumentException ex) {
-//                        ex.printStackTrace();
-//                    }
-//                }
+                if(e.getActionCommand()=="PDF"){
+                    try {
+                        PDF();
+                    } catch (IOException ex) {
+                        ex.printStackTrace();
+                    } catch (DocumentException ex) {
+                        ex.printStackTrace();
+                    }
+                }
                 if(e.getActionCommand()=="About"){
                     about();
                 }
