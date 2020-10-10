@@ -1,0 +1,680 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.1.3" sequence="0" timestamp="1602322378484" analysisTimestamp="1602322369735" release="">
+  <Project projectName="Assignment1[Assignment1]">
+    <Jar>C:\Users\admin\Desktop\数据库大作业\target\classes\Assignment$1.class</Jar>
+    <Jar>C:\Users\admin\Desktop\数据库大作业\target\classes\Assignment$MyActionListener1$1.class</Jar>
+    <Jar>C:\Users\admin\Desktop\数据库大作业\target\classes\Assignment$MyActionListener1.class</Jar>
+    <Jar>C:\Users\admin\Desktop\数据库大作业\target\classes\Assignment.class</Jar>
+    <Jar>C:\Users\admin\Desktop\数据库大作业\target\classes\JsonServerlst.class</Jar>
+    <Jar>C:\Users\admin\Desktop\数据库大作业\target\classes\KeyWord.class</Jar>
+    <Jar>C:\Users\admin\Desktop\数据库大作业\target\classes\MyEditorKit.class</Jar>
+    <Jar>C:\Users\admin\Desktop\数据库大作业\target\classes\MyEditorView.class</Jar>
+    <Jar>C:\Users\admin\Desktop\数据库大作业\target\classes\MyViewFactory.class</Jar>
+    <Jar>C:\Users\admin\Desktop\数据库大作业\target\classes\Search.class</Jar>
+    <Jar>C:\Users\admin\Desktop\数据库大作业\target\test-classes\JsonServerlstTest.class</Jar>
+    <Jar>C:\Users\admin\Desktop\数据库大作业\target\test-classes\SearchTest1.class</Jar>
+    <AuxClasspathEntry>C:/Users/admin/Desktop/数据库大作业/target/classes</AuxClasspathEntry>
+    <AuxClasspathEntry>C:/Users/admin/Desktop/数据库大作业/target/test-classes</AuxClasspathEntry>
+    <SrcDir>C:/Users/admin/Desktop/数据库大作业/src/main/java</SrcDir>
+    <SrcDir>C:/Users/admin/Desktop/数据库大作业/src/main/resources</SrcDir>
+    <SrcDir>C:/Users/admin/Desktop/数据库大作业/src/test/java</SrcDir>
+  </Project>
+  <BugInstance type="DLS_DEAD_LOCAL_STORE" priority="1" rank="15" abbrev="DLS" category="STYLE" instanceHash="9ac9152b58a5579c7d6a5c2fa82360d" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="563">
+    <ShortMessage>Dead store to local variable</ShortMessage>
+    <LongMessage>Dead store to scrollPane in new Assignment()</LongMessage>
+    <Class classname="Assignment" primary="true">
+      <SourceLine classname="Assignment" sourcefile="Assignment.java" sourcepath="Assignment.java" relSourcepath="main\java\Assignment.java">
+        <Message>In Assignment.java</Message>
+      </SourceLine>
+      <Message>In class Assignment</Message>
+    </Class>
+    <Method classname="Assignment" name="&lt;init&gt;" signature="()V" isStatic="false" primary="true">
+      <SourceLine classname="Assignment" start="212" end="243" startBytecode="0" endBytecode="278" sourcefile="Assignment.java" sourcepath="Assignment.java" relSourcepath="main\java\Assignment.java"/>
+      <Message>In method new Assignment()</Message>
+    </Method>
+    <LocalVariable name="scrollPane" register="4" pc="295" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named scrollPane</Message>
+    </LocalVariable>
+    <SourceLine classname="Assignment" primary="true" start="220" end="220" startBytecode="293" endBytecode="293" sourcefile="Assignment.java" sourcepath="Assignment.java" relSourcepath="main\java\Assignment.java">
+      <Message>At Assignment.java:[line 220]</Message>
+    </SourceLine>
+    <SourceLine classname="Assignment" primary="true" start="220" end="220" startBytecode="293" endBytecode="293" sourcefile="Assignment.java" sourcepath="Assignment.java" relSourcepath="main\java\Assignment.java">
+      <Message>At Assignment.java:[line 220]</Message>
+    </SourceLine>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.DEAD_OBJECT_STORE" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.LOCAL_NAME" value="scrollPane"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.METHOD_RESULT" value="true"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" rank="19" abbrev="Dm" category="I18N" instanceHash="af48d1542d13099fb15af1b6673a7270" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Reliance on default encoding</ShortMessage>
+    <LongMessage>Found reliance on default encoding in Assignment.open(): new java.io.InputStreamReader(InputStream)</LongMessage>
+    <Class classname="Assignment" primary="true">
+      <SourceLine classname="Assignment" sourcefile="Assignment.java" sourcepath="Assignment.java" relSourcepath="main\java\Assignment.java">
+        <Message>In Assignment.java</Message>
+      </SourceLine>
+      <Message>In class Assignment</Message>
+    </Class>
+    <Method classname="Assignment" name="open" signature="()V" isStatic="false" primary="true">
+      <SourceLine classname="Assignment" start="275" end="315" startBytecode="0" endBytecode="562" sourcefile="Assignment.java" sourcepath="Assignment.java" relSourcepath="main\java\Assignment.java"/>
+      <Message>In method Assignment.open()</Message>
+    </Method>
+    <Method classname="java.io.InputStreamReader" name="&lt;init&gt;" signature="(Ljava/io/InputStream;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.InputStreamReader" start="72" end="79" startBytecode="0" endBytecode="146" sourcefile="InputStreamReader.java" sourcepath="java/io/InputStreamReader.java"/>
+      <Message>Called method new java.io.InputStreamReader(InputStream)</Message>
+    </Method>
+    <SourceLine classname="Assignment" primary="true" start="289" end="289" startBytecode="95" endBytecode="95" sourcefile="Assignment.java" sourcepath="Assignment.java" relSourcepath="main\java\Assignment.java">
+      <Message>At Assignment.java:[line 289]</Message>
+    </SourceLine>
+    <SourceLine classname="Assignment" primary="true" start="289" end="289" startBytecode="95" endBytecode="95" sourcefile="Assignment.java" sourcepath="Assignment.java" relSourcepath="main\java\Assignment.java">
+      <Message>At Assignment.java:[line 289]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" rank="19" abbrev="Dm" category="I18N" instanceHash="c1b1374fa62b59d91f9adf3545c83071" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Reliance on default encoding</ShortMessage>
+    <LongMessage>Found reliance on default encoding in Assignment.save(): new java.io.OutputStreamWriter(OutputStream)</LongMessage>
+    <Class classname="Assignment" primary="true">
+      <SourceLine classname="Assignment" sourcefile="Assignment.java" sourcepath="Assignment.java" relSourcepath="main\java\Assignment.java">
+        <Message>In Assignment.java</Message>
+      </SourceLine>
+      <Message>In class Assignment</Message>
+    </Class>
+    <Method classname="Assignment" name="save" signature="()V" isStatic="false" primary="true">
+      <SourceLine classname="Assignment" start="318" end="340" startBytecode="0" endBytecode="344" sourcefile="Assignment.java" sourcepath="Assignment.java" relSourcepath="main\java\Assignment.java"/>
+      <Message>In method Assignment.save()</Message>
+    </Method>
+    <Method classname="java.io.OutputStreamWriter" name="&lt;init&gt;" signature="(Ljava/io/OutputStream;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.OutputStreamWriter" start="108" end="114" startBytecode="0" endBytecode="146" sourcefile="OutputStreamWriter.java" sourcepath="java/io/OutputStreamWriter.java"/>
+      <Message>Called method new java.io.OutputStreamWriter(OutputStream)</Message>
+    </Method>
+    <SourceLine classname="Assignment" primary="true" start="323" end="323" startBytecode="57" endBytecode="57" sourcefile="Assignment.java" sourcepath="Assignment.java" relSourcepath="main\java\Assignment.java">
+      <Message>At Assignment.java:[line 323]</Message>
+    </SourceLine>
+    <SourceLine classname="Assignment" primary="true" start="323" end="323" startBytecode="57" endBytecode="57" sourcefile="Assignment.java" sourcepath="Assignment.java" relSourcepath="main\java\Assignment.java">
+      <Message>At Assignment.java:[line 323]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="NP_NULL_ON_SOME_PATH_EXCEPTION" priority="2" rank="11" abbrev="NP" category="CORRECTNESS" instanceHash="47c4c265c2a19ec96c6f412e869bfd98" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="476">
+    <ShortMessage>Possible null pointer dereference in method on exception path</ShortMessage>
+    <LongMessage>Possible null pointer dereference of out in Assignment.save() on exception path</LongMessage>
+    <Class classname="Assignment" primary="true">
+      <SourceLine classname="Assignment" sourcefile="Assignment.java" sourcepath="Assignment.java" relSourcepath="main\java\Assignment.java">
+        <Message>In Assignment.java</Message>
+      </SourceLine>
+      <Message>In class Assignment</Message>
+    </Class>
+    <Method classname="Assignment" name="save" signature="()V" isStatic="false" primary="true">
+      <SourceLine classname="Assignment" start="318" end="340" startBytecode="0" endBytecode="344" sourcefile="Assignment.java" sourcepath="Assignment.java" relSourcepath="main\java\Assignment.java"/>
+      <Message>In method Assignment.save()</Message>
+    </Method>
+    <LocalVariable name="out" register="2" pc="61" role="LOCAL_VARIABLE_VALUE_OF">
+      <Message>Value loaded from out</Message>
+    </LocalVariable>
+    <SourceLine classname="Assignment" primary="true" start="334" end="334" startBytecode="94" endBytecode="94" sourcefile="Assignment.java" sourcepath="Assignment.java" relSourcepath="main\java\Assignment.java" role="SOURCE_LINE_DEREF">
+      <Message>Dereferenced at Assignment.java:[line 334]</Message>
+    </SourceLine>
+    <SourceLine classname="Assignment" start="321" end="321" startBytecode="31" endBytecode="31" sourcefile="Assignment.java" sourcepath="Assignment.java" relSourcepath="main\java\Assignment.java" role="SOURCE_LINE_NULL_VALUE">
+      <Message>Null value at Assignment.java:[line 321]</Message>
+    </SourceLine>
+    <SourceLine classname="Assignment" start="324" end="324" startBytecode="64" endBytecode="64" sourcefile="Assignment.java" sourcepath="Assignment.java" relSourcepath="main\java\Assignment.java" role="SOURCE_LINE_KNOWN_NULL">
+      <Message>Known null at Assignment.java:[line 324]</Message>
+    </SourceLine>
+    <SourceLine classname="Assignment" start="325" end="325" startBytecode="66" endBytecode="66" sourcefile="Assignment.java" sourcepath="Assignment.java" relSourcepath="main\java\Assignment.java" role="SOURCE_LINE_KNOWN_NULL">
+      <Message>Known null at Assignment.java:[line 325]</Message>
+    </SourceLine>
+    <Property name="edu.umd.cs.findbugs.detect.NullDerefProperty.ALWAYS_ON_EXCEPTION_PATH" value="true"/>
+  </BugInstance>
+  <BugInstance type="NP_NULL_PARAM_DEREF" priority="2" rank="8" abbrev="NP" category="CORRECTNESS" instanceHash="9efbb9a6fdf591c3041d777c76526ab2" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="476">
+    <ShortMessage>Method call passes null for non-null parameter</ShortMessage>
+    <LongMessage>Null passed for non-null parameter of new java.io.InputStreamReader(InputStream) in Assignment.open()</LongMessage>
+    <Class classname="Assignment" primary="true">
+      <SourceLine classname="Assignment" sourcefile="Assignment.java" sourcepath="Assignment.java" relSourcepath="main\java\Assignment.java">
+        <Message>In Assignment.java</Message>
+      </SourceLine>
+      <Message>In class Assignment</Message>
+    </Class>
+    <Method classname="Assignment" name="open" signature="()V" isStatic="false" primary="true">
+      <SourceLine classname="Assignment" start="275" end="315" startBytecode="0" endBytecode="562" sourcefile="Assignment.java" sourcepath="Assignment.java" relSourcepath="main\java\Assignment.java"/>
+      <Message>In method Assignment.open()</Message>
+    </Method>
+    <Method classname="java.io.InputStreamReader" name="&lt;init&gt;" signature="(Ljava/io/InputStream;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.InputStreamReader" start="72" end="79" startBytecode="0" endBytecode="146" sourcefile="InputStreamReader.java" sourcepath="java/io/InputStreamReader.java"/>
+      <Message>Called method new java.io.InputStreamReader(InputStream)</Message>
+    </Method>
+    <Int value="1" role="INT_MAYBE_NULL_ARG">
+      <Message>Argument 1 might be null but must not be null</Message>
+    </Int>
+    <LocalVariable name="file" register="4" pc="84" role="LOCAL_VARIABLE_VALUE_OF">
+      <Message>Value loaded from file</Message>
+    </LocalVariable>
+    <SourceLine classname="Assignment" primary="true" start="289" end="289" startBytecode="95" endBytecode="95" sourcefile="Assignment.java" sourcepath="Assignment.java" relSourcepath="main\java\Assignment.java" role="SOURCE_LINE_INVOKED">
+      <Message>Method invoked at Assignment.java:[line 289]</Message>
+    </SourceLine>
+    <SourceLine classname="Assignment" start="283" end="283" startBytecode="65" endBytecode="65" sourcefile="Assignment.java" sourcepath="Assignment.java" relSourcepath="main\java\Assignment.java" role="SOURCE_LINE_NULL_VALUE">
+      <Message>Null value at Assignment.java:[line 283]</Message>
+    </SourceLine>
+    <SourceLine classname="Assignment" start="286" end="286" startBytecode="87" endBytecode="87" sourcefile="Assignment.java" sourcepath="Assignment.java" relSourcepath="main\java\Assignment.java" role="SOURCE_LINE_KNOWN_NULL">
+      <Message>Known null at Assignment.java:[line 286]</Message>
+    </SourceLine>
+    <Property name="edu.umd.cs.findbugs.detect.NullDerefProperty.ALWAYS_ON_EXCEPTION_PATH" value="true"/>
+  </BugInstance>
+  <BugInstance type="OS_OPEN_STREAM" priority="2" rank="16" abbrev="OS" category="BAD_PRACTICE" instanceHash="9ed987fca578fa5870589f7bbd7686c0" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Method may fail to close stream</ShortMessage>
+    <LongMessage>Assignment.open() may fail to close stream</LongMessage>
+    <Class classname="Assignment" primary="true">
+      <SourceLine classname="Assignment" sourcefile="Assignment.java" sourcepath="Assignment.java" relSourcepath="main\java\Assignment.java">
+        <Message>In Assignment.java</Message>
+      </SourceLine>
+      <Message>In class Assignment</Message>
+    </Class>
+    <Method classname="Assignment" name="open" signature="()V" isStatic="false" primary="true">
+      <SourceLine classname="Assignment" start="275" end="315" startBytecode="0" endBytecode="83" sourcefile="Assignment.java" sourcepath="Assignment.java" relSourcepath="main\java\Assignment.java"/>
+      <Message>In method Assignment.open()</Message>
+    </Method>
+    <Type descriptor="Ljava/io/Reader;" role="TYPE_CLOSEIT">
+      <SourceLine classname="java.io.Reader" start="81" end="388" sourcefile="Reader.java" sourcepath="java/io/Reader.java">
+        <Message>At Reader.java:[lines 81-388]</Message>
+      </SourceLine>
+      <Message>Need to close java.io.Reader </Message>
+    </Type>
+    <SourceLine classname="Assignment" primary="true" start="290" end="290" startBytecode="100" endBytecode="100" sourcefile="Assignment.java" sourcepath="Assignment.java" relSourcepath="main\java\Assignment.java">
+      <Message>At Assignment.java:[line 290]</Message>
+    </SourceLine>
+    <SourceLine classname="Assignment" primary="true" start="290" end="290" startBytecode="100" endBytecode="100" sourcefile="Assignment.java" sourcepath="Assignment.java" relSourcepath="main\java\Assignment.java">
+      <Message>At Assignment.java:[line 290]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DLS_DEAD_LOCAL_STORE" priority="2" rank="17" abbrev="DLS" category="STYLE" instanceHash="267225f5b71465cd2455b7eab8a7b9eb" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="563">
+    <ShortMessage>Dead store to local variable</ShortMessage>
+    <LongMessage>Dead store to indexList in Assignment$MyActionListener1$1.actionPerformed(ActionEvent)</LongMessage>
+    <Class classname="Assignment$MyActionListener1$1" primary="true">
+      <SourceLine classname="Assignment$MyActionListener1$1" sourcefile="Assignment.java" sourcepath="Assignment.java" relSourcepath="main\java\Assignment.java">
+        <Message>In Assignment.java</Message>
+      </SourceLine>
+      <Message>In class Assignment$MyActionListener1$1</Message>
+    </Class>
+    <Method classname="Assignment$MyActionListener1$1" name="actionPerformed" signature="(Ljava/awt/event/ActionEvent;)V" isStatic="false" primary="true">
+      <SourceLine classname="Assignment$MyActionListener1$1" start="523" end="544" startBytecode="0" endBytecode="74" sourcefile="Assignment.java" sourcepath="Assignment.java" relSourcepath="main\java\Assignment.java"/>
+      <Message>In method Assignment$MyActionListener1$1.actionPerformed(ActionEvent)</Message>
+    </Method>
+    <LocalVariable name="indexList" register="5" pc="68" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named indexList</Message>
+    </LocalVariable>
+    <SourceLine classname="Assignment$MyActionListener1$1" primary="true" start="529" end="529" startBytecode="66" endBytecode="66" sourcefile="Assignment.java" sourcepath="Assignment.java" relSourcepath="main\java\Assignment.java">
+      <Message>At Assignment.java:[line 529]</Message>
+    </SourceLine>
+    <SourceLine classname="Assignment$MyActionListener1$1" primary="true" start="529" end="529" startBytecode="66" endBytecode="66" sourcefile="Assignment.java" sourcepath="Assignment.java" relSourcepath="main\java\Assignment.java">
+      <Message>At Assignment.java:[line 529]</Message>
+    </SourceLine>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.DEAD_OBJECT_STORE" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.KILLED_BY_SUBSEQUENT_STORE" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.LOCAL_NAME" value="indexList"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.METHOD_RESULT" value="true"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" rank="19" abbrev="Dm" category="I18N" instanceHash="e5796701e4c849536aa67215d3ff709d" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Reliance on default encoding</ShortMessage>
+    <LongMessage>Found reliance on default encoding in JsonServerlst.NAME1(): new java.io.FileReader(File)</LongMessage>
+    <Class classname="JsonServerlst" primary="true">
+      <SourceLine classname="JsonServerlst" sourcefile="JsonServerlst.java" sourcepath="JsonServerlst.java" relSourcepath="main\java\JsonServerlst.java">
+        <Message>In JsonServerlst.java</Message>
+      </SourceLine>
+      <Message>In class JsonServerlst</Message>
+    </Class>
+    <Method classname="JsonServerlst" name="NAME1" signature="()Ljava/lang/String;" isStatic="true" primary="true">
+      <SourceLine classname="JsonServerlst" start="29" end="43" startBytecode="0" endBytecode="305" sourcefile="JsonServerlst.java" sourcepath="JsonServerlst.java" relSourcepath="main\java\JsonServerlst.java"/>
+      <Message>In method JsonServerlst.NAME1()</Message>
+    </Method>
+    <Method classname="java.io.FileReader" name="&lt;init&gt;" signature="(Ljava/io/File;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.FileReader" start="75" end="76" startBytecode="0" endBytecode="68" sourcefile="FileReader.java" sourcepath="java/io/FileReader.java"/>
+      <Message>Called method new java.io.FileReader(File)</Message>
+    </Method>
+    <SourceLine classname="JsonServerlst" primary="true" start="30" end="30" startBytecode="15" endBytecode="15" sourcefile="JsonServerlst.java" sourcepath="JsonServerlst.java" relSourcepath="main\java\JsonServerlst.java">
+      <Message>At JsonServerlst.java:[line 30]</Message>
+    </SourceLine>
+    <SourceLine classname="JsonServerlst" primary="true" start="30" end="30" startBytecode="15" endBytecode="15" sourcefile="JsonServerlst.java" sourcepath="JsonServerlst.java" relSourcepath="main\java\JsonServerlst.java">
+      <Message>At JsonServerlst.java:[line 30]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" rank="19" abbrev="Dm" category="I18N" instanceHash="74098374bf8df23f4281e33b638eb3c1" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Reliance on default encoding</ShortMessage>
+    <LongMessage>Found reliance on default encoding in JsonServerlst.number1(): new java.io.FileReader(File)</LongMessage>
+    <Class classname="JsonServerlst" primary="true">
+      <SourceLine classname="JsonServerlst" sourcefile="JsonServerlst.java" sourcepath="JsonServerlst.java" relSourcepath="main\java\JsonServerlst.java">
+        <Message>In JsonServerlst.java</Message>
+      </SourceLine>
+      <Message>In class JsonServerlst</Message>
+    </Class>
+    <Method classname="JsonServerlst" name="number1" signature="()Ljava/lang/String;" isStatic="true" primary="true">
+      <SourceLine classname="JsonServerlst" start="46" end="60" startBytecode="0" endBytecode="305" sourcefile="JsonServerlst.java" sourcepath="JsonServerlst.java" relSourcepath="main\java\JsonServerlst.java"/>
+      <Message>In method JsonServerlst.number1()</Message>
+    </Method>
+    <Method classname="java.io.FileReader" name="&lt;init&gt;" signature="(Ljava/io/File;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.FileReader" start="75" end="76" startBytecode="0" endBytecode="68" sourcefile="FileReader.java" sourcepath="java/io/FileReader.java"/>
+      <Message>Called method new java.io.FileReader(File)</Message>
+    </Method>
+    <SourceLine classname="JsonServerlst" primary="true" start="47" end="47" startBytecode="15" endBytecode="15" sourcefile="JsonServerlst.java" sourcepath="JsonServerlst.java" relSourcepath="main\java\JsonServerlst.java">
+      <Message>At JsonServerlst.java:[line 47]</Message>
+    </SourceLine>
+    <SourceLine classname="JsonServerlst" primary="true" start="47" end="47" startBytecode="15" endBytecode="15" sourcefile="JsonServerlst.java" sourcepath="JsonServerlst.java" relSourcepath="main\java\JsonServerlst.java">
+      <Message>At JsonServerlst.java:[line 47]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" rank="19" abbrev="Dm" category="I18N" instanceHash="3c685adfa670509ca47e450226aa43ae" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Reliance on default encoding</ShortMessage>
+    <LongMessage>Found reliance on default encoding in JsonServerlst.number2(): new java.io.FileReader(File)</LongMessage>
+    <Class classname="JsonServerlst" primary="true">
+      <SourceLine classname="JsonServerlst" sourcefile="JsonServerlst.java" sourcepath="JsonServerlst.java" relSourcepath="main\java\JsonServerlst.java">
+        <Message>In JsonServerlst.java</Message>
+      </SourceLine>
+      <Message>In class JsonServerlst</Message>
+    </Class>
+    <Method classname="JsonServerlst" name="number2" signature="()Ljava/lang/String;" isStatic="true" primary="true">
+      <SourceLine classname="JsonServerlst" start="64" end="78" startBytecode="0" endBytecode="305" sourcefile="JsonServerlst.java" sourcepath="JsonServerlst.java" relSourcepath="main\java\JsonServerlst.java"/>
+      <Message>In method JsonServerlst.number2()</Message>
+    </Method>
+    <Method classname="java.io.FileReader" name="&lt;init&gt;" signature="(Ljava/io/File;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.FileReader" start="75" end="76" startBytecode="0" endBytecode="68" sourcefile="FileReader.java" sourcepath="java/io/FileReader.java"/>
+      <Message>Called method new java.io.FileReader(File)</Message>
+    </Method>
+    <SourceLine classname="JsonServerlst" primary="true" start="65" end="65" startBytecode="15" endBytecode="15" sourcefile="JsonServerlst.java" sourcepath="JsonServerlst.java" relSourcepath="main\java\JsonServerlst.java">
+      <Message>At JsonServerlst.java:[line 65]</Message>
+    </SourceLine>
+    <SourceLine classname="JsonServerlst" primary="true" start="65" end="65" startBytecode="15" endBytecode="15" sourcefile="JsonServerlst.java" sourcepath="JsonServerlst.java" relSourcepath="main\java\JsonServerlst.java">
+      <Message>At JsonServerlst.java:[line 65]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" rank="19" abbrev="Dm" category="I18N" instanceHash="3875d81e0ee936c85e232a8e8ba0259d" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Reliance on default encoding</ShortMessage>
+    <LongMessage>Found reliance on default encoding in JsonServerlst.service(): new java.io.FileReader(File)</LongMessage>
+    <Class classname="JsonServerlst" primary="true">
+      <SourceLine classname="JsonServerlst" sourcefile="JsonServerlst.java" sourcepath="JsonServerlst.java" relSourcepath="main\java\JsonServerlst.java">
+        <Message>In JsonServerlst.java</Message>
+      </SourceLine>
+      <Message>In class JsonServerlst</Message>
+    </Class>
+    <Method classname="JsonServerlst" name="service" signature="()Ljava/lang/String;" isStatic="true" primary="true">
+      <SourceLine classname="JsonServerlst" start="11" end="26" startBytecode="0" endBytecode="305" sourcefile="JsonServerlst.java" sourcepath="JsonServerlst.java" relSourcepath="main\java\JsonServerlst.java"/>
+      <Message>In method JsonServerlst.service()</Message>
+    </Method>
+    <Method classname="java.io.FileReader" name="&lt;init&gt;" signature="(Ljava/io/File;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.FileReader" start="75" end="76" startBytecode="0" endBytecode="68" sourcefile="FileReader.java" sourcepath="java/io/FileReader.java"/>
+      <Message>Called method new java.io.FileReader(File)</Message>
+    </Method>
+    <SourceLine classname="JsonServerlst" primary="true" start="12" end="12" startBytecode="15" endBytecode="15" sourcefile="JsonServerlst.java" sourcepath="JsonServerlst.java" relSourcepath="main\java\JsonServerlst.java">
+      <Message>At JsonServerlst.java:[line 12]</Message>
+    </SourceLine>
+    <SourceLine classname="JsonServerlst" primary="true" start="12" end="12" startBytecode="15" endBytecode="15" sourcefile="JsonServerlst.java" sourcepath="JsonServerlst.java" relSourcepath="main\java\JsonServerlst.java">
+      <Message>At JsonServerlst.java:[line 12]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="OBL_UNSATISFIED_OBLIGATION_EXCEPTION_EDGE" priority="2" rank="20" abbrev="OBL" category="EXPERIMENTAL" instanceHash="8bb884f8088c8384a9d4698cc5bc2fee" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Method may fail to clean up stream or resource on checked exception</ShortMessage>
+    <LongMessage>JsonServerlst.NAME1() may fail to clean up java.io.Reader on checked exception</LongMessage>
+    <Class classname="JsonServerlst" primary="true">
+      <SourceLine classname="JsonServerlst" sourcefile="JsonServerlst.java" sourcepath="JsonServerlst.java" relSourcepath="main\java\JsonServerlst.java">
+        <Message>In JsonServerlst.java</Message>
+      </SourceLine>
+      <Message>In class JsonServerlst</Message>
+    </Class>
+    <Method classname="JsonServerlst" name="NAME1" signature="()Ljava/lang/String;" isStatic="true" primary="true">
+      <SourceLine classname="JsonServerlst" start="29" end="43" startBytecode="0" endBytecode="305" sourcefile="JsonServerlst.java" sourcepath="JsonServerlst.java" relSourcepath="main\java\JsonServerlst.java"/>
+      <Message>In method JsonServerlst.NAME1()</Message>
+    </Method>
+    <Class classname="java.io.Reader" role="CLASS_REFTYPE">
+      <SourceLine classname="java.io.Reader" sourcefile="Reader.java" sourcepath="java/io/Reader.java">
+        <Message>In Reader.java</Message>
+      </SourceLine>
+      <Message>Reference type java.io.Reader</Message>
+    </Class>
+    <Int value="1" role="INT_OBLIGATIONS_REMAINING">
+      <Message>1 instances of obligation remaining</Message>
+    </Int>
+    <SourceLine classname="JsonServerlst" primary="true" start="30" end="30" startBytecode="15" endBytecode="15" sourcefile="JsonServerlst.java" sourcepath="JsonServerlst.java" relSourcepath="main\java\JsonServerlst.java" role="SOURCE_LINE_OBLIGATION_CREATED">
+      <Message>Obligation to clean up resource created at JsonServerlst.java:[line 30] is not discharged</Message>
+    </SourceLine>
+    <SourceLine classname="JsonServerlst" start="31" end="31" startBytecode="19" endBytecode="19" sourcefile="JsonServerlst.java" sourcepath="JsonServerlst.java" relSourcepath="main\java\JsonServerlst.java" role="SOURCE_LINE_PATH_CONTINUES">
+      <Message>Path continues at JsonServerlst.java:[line 31]</Message>
+    </SourceLine>
+    <SourceLine classname="JsonServerlst" start="32" end="32" startBytecode="22" endBytecode="22" sourcefile="JsonServerlst.java" sourcepath="JsonServerlst.java" relSourcepath="main\java\JsonServerlst.java" role="SOURCE_LINE_PATH_CONTINUES">
+      <Message>Path continues at JsonServerlst.java:[line 32]</Message>
+    </SourceLine>
+    <String value="{Reader x 1}" role="STRING_REMAINING_OBLIGATIONS">
+      <Message>Remaining obligations: {Reader x 1}</Message>
+    </String>
+  </BugInstance>
+  <BugInstance type="OBL_UNSATISFIED_OBLIGATION_EXCEPTION_EDGE" priority="2" rank="20" abbrev="OBL" category="EXPERIMENTAL" instanceHash="d2d9ac609b7f4e985d481a72b5cf9eab" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Method may fail to clean up stream or resource on checked exception</ShortMessage>
+    <LongMessage>JsonServerlst.number1() may fail to clean up java.io.Reader on checked exception</LongMessage>
+    <Class classname="JsonServerlst" primary="true">
+      <SourceLine classname="JsonServerlst" sourcefile="JsonServerlst.java" sourcepath="JsonServerlst.java" relSourcepath="main\java\JsonServerlst.java">
+        <Message>In JsonServerlst.java</Message>
+      </SourceLine>
+      <Message>In class JsonServerlst</Message>
+    </Class>
+    <Method classname="JsonServerlst" name="number1" signature="()Ljava/lang/String;" isStatic="true" primary="true">
+      <SourceLine classname="JsonServerlst" start="46" end="60" startBytecode="0" endBytecode="305" sourcefile="JsonServerlst.java" sourcepath="JsonServerlst.java" relSourcepath="main\java\JsonServerlst.java"/>
+      <Message>In method JsonServerlst.number1()</Message>
+    </Method>
+    <Class classname="java.io.Reader" role="CLASS_REFTYPE">
+      <SourceLine classname="java.io.Reader" sourcefile="Reader.java" sourcepath="java/io/Reader.java">
+        <Message>In Reader.java</Message>
+      </SourceLine>
+      <Message>Reference type java.io.Reader</Message>
+    </Class>
+    <Int value="1" role="INT_OBLIGATIONS_REMAINING">
+      <Message>1 instances of obligation remaining</Message>
+    </Int>
+    <SourceLine classname="JsonServerlst" primary="true" start="47" end="47" startBytecode="15" endBytecode="15" sourcefile="JsonServerlst.java" sourcepath="JsonServerlst.java" relSourcepath="main\java\JsonServerlst.java" role="SOURCE_LINE_OBLIGATION_CREATED">
+      <Message>Obligation to clean up resource created at JsonServerlst.java:[line 47] is not discharged</Message>
+    </SourceLine>
+    <SourceLine classname="JsonServerlst" start="48" end="48" startBytecode="19" endBytecode="19" sourcefile="JsonServerlst.java" sourcepath="JsonServerlst.java" relSourcepath="main\java\JsonServerlst.java" role="SOURCE_LINE_PATH_CONTINUES">
+      <Message>Path continues at JsonServerlst.java:[line 48]</Message>
+    </SourceLine>
+    <SourceLine classname="JsonServerlst" start="49" end="49" startBytecode="22" endBytecode="22" sourcefile="JsonServerlst.java" sourcepath="JsonServerlst.java" relSourcepath="main\java\JsonServerlst.java" role="SOURCE_LINE_PATH_CONTINUES">
+      <Message>Path continues at JsonServerlst.java:[line 49]</Message>
+    </SourceLine>
+    <String value="{Reader x 1}" role="STRING_REMAINING_OBLIGATIONS">
+      <Message>Remaining obligations: {Reader x 1}</Message>
+    </String>
+  </BugInstance>
+  <BugInstance type="OBL_UNSATISFIED_OBLIGATION_EXCEPTION_EDGE" priority="2" rank="20" abbrev="OBL" category="EXPERIMENTAL" instanceHash="d0da48780cf68316d6c3d92e40dd9860" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Method may fail to clean up stream or resource on checked exception</ShortMessage>
+    <LongMessage>JsonServerlst.number2() may fail to clean up java.io.Reader on checked exception</LongMessage>
+    <Class classname="JsonServerlst" primary="true">
+      <SourceLine classname="JsonServerlst" sourcefile="JsonServerlst.java" sourcepath="JsonServerlst.java" relSourcepath="main\java\JsonServerlst.java">
+        <Message>In JsonServerlst.java</Message>
+      </SourceLine>
+      <Message>In class JsonServerlst</Message>
+    </Class>
+    <Method classname="JsonServerlst" name="number2" signature="()Ljava/lang/String;" isStatic="true" primary="true">
+      <SourceLine classname="JsonServerlst" start="64" end="78" startBytecode="0" endBytecode="305" sourcefile="JsonServerlst.java" sourcepath="JsonServerlst.java" relSourcepath="main\java\JsonServerlst.java"/>
+      <Message>In method JsonServerlst.number2()</Message>
+    </Method>
+    <Class classname="java.io.Reader" role="CLASS_REFTYPE">
+      <SourceLine classname="java.io.Reader" sourcefile="Reader.java" sourcepath="java/io/Reader.java">
+        <Message>In Reader.java</Message>
+      </SourceLine>
+      <Message>Reference type java.io.Reader</Message>
+    </Class>
+    <Int value="1" role="INT_OBLIGATIONS_REMAINING">
+      <Message>1 instances of obligation remaining</Message>
+    </Int>
+    <SourceLine classname="JsonServerlst" primary="true" start="65" end="65" startBytecode="15" endBytecode="15" sourcefile="JsonServerlst.java" sourcepath="JsonServerlst.java" relSourcepath="main\java\JsonServerlst.java" role="SOURCE_LINE_OBLIGATION_CREATED">
+      <Message>Obligation to clean up resource created at JsonServerlst.java:[line 65] is not discharged</Message>
+    </SourceLine>
+    <SourceLine classname="JsonServerlst" start="66" end="66" startBytecode="19" endBytecode="19" sourcefile="JsonServerlst.java" sourcepath="JsonServerlst.java" relSourcepath="main\java\JsonServerlst.java" role="SOURCE_LINE_PATH_CONTINUES">
+      <Message>Path continues at JsonServerlst.java:[line 66]</Message>
+    </SourceLine>
+    <SourceLine classname="JsonServerlst" start="67" end="67" startBytecode="22" endBytecode="22" sourcefile="JsonServerlst.java" sourcepath="JsonServerlst.java" relSourcepath="main\java\JsonServerlst.java" role="SOURCE_LINE_PATH_CONTINUES">
+      <Message>Path continues at JsonServerlst.java:[line 67]</Message>
+    </SourceLine>
+    <String value="{Reader x 1}" role="STRING_REMAINING_OBLIGATIONS">
+      <Message>Remaining obligations: {Reader x 1}</Message>
+    </String>
+  </BugInstance>
+  <BugInstance type="OBL_UNSATISFIED_OBLIGATION_EXCEPTION_EDGE" priority="2" rank="20" abbrev="OBL" category="EXPERIMENTAL" instanceHash="a3719874328f3d12757ba0efbb0b4bc1" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Method may fail to clean up stream or resource on checked exception</ShortMessage>
+    <LongMessage>JsonServerlst.service() may fail to clean up java.io.Reader on checked exception</LongMessage>
+    <Class classname="JsonServerlst" primary="true">
+      <SourceLine classname="JsonServerlst" sourcefile="JsonServerlst.java" sourcepath="JsonServerlst.java" relSourcepath="main\java\JsonServerlst.java">
+        <Message>In JsonServerlst.java</Message>
+      </SourceLine>
+      <Message>In class JsonServerlst</Message>
+    </Class>
+    <Method classname="JsonServerlst" name="service" signature="()Ljava/lang/String;" isStatic="true" primary="true">
+      <SourceLine classname="JsonServerlst" start="11" end="26" startBytecode="0" endBytecode="305" sourcefile="JsonServerlst.java" sourcepath="JsonServerlst.java" relSourcepath="main\java\JsonServerlst.java"/>
+      <Message>In method JsonServerlst.service()</Message>
+    </Method>
+    <Class classname="java.io.Reader" role="CLASS_REFTYPE">
+      <SourceLine classname="java.io.Reader" sourcefile="Reader.java" sourcepath="java/io/Reader.java">
+        <Message>In Reader.java</Message>
+      </SourceLine>
+      <Message>Reference type java.io.Reader</Message>
+    </Class>
+    <Int value="1" role="INT_OBLIGATIONS_REMAINING">
+      <Message>1 instances of obligation remaining</Message>
+    </Int>
+    <SourceLine classname="JsonServerlst" primary="true" start="12" end="12" startBytecode="15" endBytecode="15" sourcefile="JsonServerlst.java" sourcepath="JsonServerlst.java" relSourcepath="main\java\JsonServerlst.java" role="SOURCE_LINE_OBLIGATION_CREATED">
+      <Message>Obligation to clean up resource created at JsonServerlst.java:[line 12] is not discharged</Message>
+    </SourceLine>
+    <SourceLine classname="JsonServerlst" start="13" end="13" startBytecode="19" endBytecode="19" sourcefile="JsonServerlst.java" sourcepath="JsonServerlst.java" relSourcepath="main\java\JsonServerlst.java" role="SOURCE_LINE_PATH_CONTINUES">
+      <Message>Path continues at JsonServerlst.java:[line 13]</Message>
+    </SourceLine>
+    <SourceLine classname="JsonServerlst" start="14" end="14" startBytecode="22" endBytecode="22" sourcefile="JsonServerlst.java" sourcepath="JsonServerlst.java" relSourcepath="main\java\JsonServerlst.java" role="SOURCE_LINE_PATH_CONTINUES">
+      <Message>Path continues at JsonServerlst.java:[line 14]</Message>
+    </SourceLine>
+    <String value="{Reader x 1}" role="STRING_REMAINING_OBLIGATIONS">
+      <Message>Remaining obligations: {Reader x 1}</Message>
+    </String>
+  </BugInstance>
+  <BugInstance type="NS_DANGEROUS_NON_SHORT_CIRCUIT" priority="1" rank="15" abbrev="NS" category="STYLE" instanceHash="4c3c6dcfd365f616ce3138c8897de4aa" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Potentially dangerous use of non-short-circuit logic</ShortMessage>
+    <LongMessage>Potentially dangerous use of non-short-circuit logic in Search.search(String, String)</LongMessage>
+    <Class classname="Search" primary="true">
+      <SourceLine classname="Search" sourcefile="Search.java" sourcepath="Search.java" relSourcepath="main\java\Search.java">
+        <Message>In Search.java</Message>
+      </SourceLine>
+      <Message>In class Search</Message>
+    </Class>
+    <Method classname="Search" name="search" signature="(Ljava/lang/String;Ljava/lang/String;)Ljava/util/ArrayList;" isStatic="true" primary="true">
+      <SourceLine classname="Search" start="7" end="17" startBytecode="0" endBytecode="298" sourcefile="Search.java" sourcepath="Search.java" relSourcepath="main\java\Search.java"/>
+      <Message>In method Search.search(String, String)</Message>
+    </Method>
+    <SourceLine classname="Search" primary="true" start="10" end="10" startBytecode="48" endBytecode="48" sourcefile="Search.java" sourcepath="Search.java" relSourcepath="main\java\Search.java">
+      <Message>At Search.java:[line 10]</Message>
+    </SourceLine>
+    <SourceLine classname="Search" primary="true" start="10" end="10" startBytecode="48" endBytecode="48" sourcefile="Search.java" sourcepath="Search.java" relSourcepath="main\java\Search.java">
+      <Message>At Search.java:[line 10]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugCategory category="BAD_PRACTICE">
+    <Description>Bad practice</Description>
+  </BugCategory>
+  <BugCategory category="CORRECTNESS">
+    <Description>Correctness</Description>
+  </BugCategory>
+  <BugCategory category="STYLE">
+    <Description>Dodgy code</Description>
+  </BugCategory>
+  <BugCategory category="EXPERIMENTAL">
+    <Description>Experimental</Description>
+  </BugCategory>
+  <BugCategory category="I18N">
+    <Description>Internationalization</Description>
+  </BugCategory>
+  <BugPattern type="DLS_DEAD_LOCAL_STORE" abbrev="DLS" category="STYLE">
+    <ShortDescription>Dead store to local variable</ShortDescription>
+    <Details><![CDATA[
+
+<p>
+This instruction assigns a value to a local variable,
+but the value is not read or used in any subsequent instruction.
+Often, this indicates an error, because the value computed is never
+used.
+</p>
+<p>
+Note that Sun's javac compiler often generates dead stores for
+final local variables.  Because SpotBugs is a bytecode-based tool,
+there is no easy way to eliminate these false positives.
+</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="NP_NULL_PARAM_DEREF" abbrev="NP" category="CORRECTNESS">
+    <ShortDescription>Method call passes null for non-null parameter</ShortDescription>
+    <Details><![CDATA[
+      
+      <p>
+      This method call passes a null value for a non-null method parameter.
+    Either the parameter is annotated as a parameter that should
+    always be non-null, or analysis has shown that it will always be
+    dereferenced.
+      </p>
+      
+   ]]></Details>
+  </BugPattern>
+  <BugPattern type="DM_DEFAULT_ENCODING" abbrev="Dm" category="I18N">
+    <ShortDescription>Reliance on default encoding</ShortDescription>
+    <Details><![CDATA[
+
+<p> Found a call to a method which will perform a byte to String (or String to byte) conversion, and will assume that the default platform encoding is suitable. This will cause the application behaviour to vary between platforms. Use an alternative API and specify a charset name or Charset object explicitly.  </p>
+
+      ]]></Details>
+  </BugPattern>
+  <BugPattern type="NS_DANGEROUS_NON_SHORT_CIRCUIT" abbrev="NS" category="STYLE">
+    <ShortDescription>Potentially dangerous use of non-short-circuit logic</ShortDescription>
+    <Details><![CDATA[
+
+  <p> This code seems to be using non-short-circuit logic (e.g., &amp;
+or |)
+rather than short-circuit logic (&amp;&amp; or ||). In addition,
+it seem possible that, depending on the value of the left hand side, you might not
+want to evaluate the right hand side (because it would have side effects, could cause an exception
+or could be expensive.</p>
+<p>
+Non-short-circuit logic causes both sides of the expression
+to be evaluated even when the result can be inferred from
+knowing the left-hand side. This can be less efficient and
+can result in errors if the left-hand side guards cases
+when evaluating the right-hand side can generate an error.
+</p>
+
+<p>See <a href="https://docs.oracle.com/javase/specs/jls/se7/html/jls-15.html#jls-15.22.2">the Java
+Language Specification</a> for details.
+
+</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="OBL_UNSATISFIED_OBLIGATION_EXCEPTION_EDGE" abbrev="OBL" category="EXPERIMENTAL">
+    <ShortDescription>Method may fail to clean up stream or resource on checked exception</ShortDescription>
+    <Details><![CDATA[
+          
+          <p>
+          This method may fail to clean up (close, dispose of) a stream,
+          database object, or other
+          resource requiring an explicit cleanup operation.
+          </p>
+
+          <p>
+          In general, if a method opens a stream or other resource,
+          the method should use a try/finally block to ensure that
+          the stream or resource is cleaned up before the method
+          returns.
+          </p>
+
+          <p>
+          This bug pattern is essentially the same as the
+          OS_OPEN_STREAM and ODR_OPEN_DATABASE_RESOURCE
+          bug patterns, but is based on a different
+          (and hopefully better) static analysis technique.
+          We are interested is getting feedback about the
+          usefulness of this bug pattern.
+          For sending feedback, check:
+          </p>
+          <ul>
+            <li><a href="https://github.com/spotbugs/spotbugs/blob/master/CONTRIBUTING.md">contributing guideline</a></li>
+            <li><a href="https://github.com/spotbugs/discuss/issues?q=">malinglist</a></li>
+          </ul>
+
+          <p>
+          In particular,
+          the false-positive suppression heuristics for this
+          bug pattern have not been extensively tuned, so
+          reports about false positives are helpful to us.
+          </p>
+
+          <p>
+          See Weimer and Necula, <i>Finding and Preventing Run-Time Error Handling Mistakes</i>, for
+          a description of the analysis technique.
+          </p>
+          
+      ]]></Details>
+  </BugPattern>
+  <BugPattern type="NP_NULL_ON_SOME_PATH_EXCEPTION" abbrev="NP" category="CORRECTNESS">
+    <ShortDescription>Possible null pointer dereference in method on exception path</ShortDescription>
+    <Details><![CDATA[
+
+<p> A reference value which is null on some exception control path is
+dereferenced here.&nbsp; This may lead to a <code>NullPointerException</code>
+when the code is executed.&nbsp;
+Note that because SpotBugs currently does not prune infeasible exception paths,
+this may be a false warning.</p>
+
+<p> Also note that SpotBugs considers the default case of a switch statement to
+be an exception path, since the default case is often infeasible.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="OS_OPEN_STREAM" abbrev="OS" category="BAD_PRACTICE">
+    <ShortDescription>Method may fail to close stream</ShortDescription>
+    <Details><![CDATA[
+
+<p> The method creates an IO stream object, does not assign it to any
+fields, pass it to other methods that might close it,
+or return it, and does not appear to close
+the stream on all paths out of the method.&nbsp; This may result in
+a file descriptor leak.&nbsp; It is generally a good
+idea to use a <code>finally</code> block to ensure that streams are
+closed.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugCode abbrev="NP" cweid="476">
+    <Description>Null pointer dereference</Description>
+  </BugCode>
+  <BugCode abbrev="OS">
+    <Description>Stream not closed on all paths</Description>
+  </BugCode>
+  <BugCode abbrev="NS">
+    <Description>Suspicious use of non-short-circuit boolean operator</Description>
+  </BugCode>
+  <BugCode abbrev="OBL">
+    <Description>Unsatisfied obligation to clean up stream or resource</Description>
+  </BugCode>
+  <BugCode abbrev="Dm">
+    <Description>Dubious method used</Description>
+  </BugCode>
+  <BugCode abbrev="DLS" cweid="563">
+    <Description>Dead local store</Description>
+  </BugCode>
+  <Errors errors="0" missingClasses="0"></Errors>
+  <FindBugsSummary timestamp="Sat, 10 Oct 2020 17:32:47 +0800" total_classes="12" referenced_classes="411" total_bugs="16" total_size="512" num_packages="1" java_version="11.0.5" vm_version="11.0.5+10-b520.38" cpu_seconds="37.31" clock_seconds="47.77" peak_mbytes="1146.77" alloc_mbytes="972.50" gc_seconds="0.15" priority_2="8" priority_1="8">
+    <FileStats path="Assignment.java" bugCount="7" size="409" bugHash="e782be42263e066bca0bb46f07468aa5"/>
+    <FileStats path="JsonServerlst.java" bugCount="8" size="63" bugHash="d3d0fa6ce5b360b7d0a2c402a54bd1dd"/>
+    <FileStats path="JsonServerlstTest.java" bugCount="0" size="12"/>
+    <FileStats path="Search.java" bugCount="1" size="15" bugHash="df21bd683013bd44183fecd2afb78f49"/>
+    <FileStats path="SearchTest1.java" bugCount="0" size="13"/>
+    <PackageStats package="" total_bugs="16" total_types="12" total_size="512" priority_2="8" priority_1="8">
+      <ClassStats class="Assignment" sourceFile="Assignment.java" interface="false" size="220" bugs="6" priority_2="3" priority_1="3"/>
+      <ClassStats class="Assignment$1" sourceFile="Assignment.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="Assignment$MyActionListener1" sourceFile="Assignment.java" interface="false" size="56" bugs="0"/>
+      <ClassStats class="Assignment$MyActionListener1$1" sourceFile="Assignment.java" interface="false" size="21" bugs="1" priority_2="1"/>
+      <ClassStats class="JsonServerlst" sourceFile="JsonServerlst.java" interface="false" size="63" bugs="8" priority_2="4" priority_1="4"/>
+      <ClassStats class="JsonServerlstTest" sourceFile="JsonServerlstTest.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="KeyWord" sourceFile="Assignment.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="MyEditorKit" sourceFile="Assignment.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="MyEditorView" sourceFile="Assignment.java" interface="false" size="78" bugs="0"/>
+      <ClassStats class="MyViewFactory" sourceFile="Assignment.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="Search" sourceFile="Search.java" interface="false" size="15" bugs="1" priority_1="1"/>
+      <ClassStats class="SearchTest1" sourceFile="SearchTest1.java" interface="false" size="13" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="1498" invocations="1912" avgMicrosecondsPerInvocation="783" maxMicrosecondsPerInvocation="40787" standardDeviationMicrosecondsPerInvocation="2144"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="1359" invocations="1916" avgMicrosecondsPerInvocation="709" maxMicrosecondsPerInvocation="29503" standardDeviationMicrosecondsPerInvocation="941"/>
+      <ClassProfile name="edu.umd.cs.findbugs.FindBugs2" totalMilliseconds="914" invocations="2" avgMicrosecondsPerInvocation="457467" maxMicrosecondsPerInvocation="491007" standardDeviationMicrosecondsPerInvocation="33546"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="715" invocations="411" avgMicrosecondsPerInvocation="1741" maxMicrosecondsPerInvocation="43710" standardDeviationMicrosecondsPerInvocation="3880"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="652" invocations="411" avgMicrosecondsPerInvocation="1588" maxMicrosecondsPerInvocation="30073" standardDeviationMicrosecondsPerInvocation="3247"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="396" invocations="814" avgMicrosecondsPerInvocation="486" maxMicrosecondsPerInvocation="7634" standardDeviationMicrosecondsPerInvocation="627"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="209" invocations="411" avgMicrosecondsPerInvocation="510" maxMicrosecondsPerInvocation="13232" standardDeviationMicrosecondsPerInvocation="1166"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="180" invocations="502" avgMicrosecondsPerInvocation="360" maxMicrosecondsPerInvocation="43861" standardDeviationMicrosecondsPerInvocation="2010"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="145" invocations="46" avgMicrosecondsPerInvocation="3166" maxMicrosecondsPerInvocation="17759" standardDeviationMicrosecondsPerInvocation="4330"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="136" invocations="411" avgMicrosecondsPerInvocation="333" maxMicrosecondsPerInvocation="4379" standardDeviationMicrosecondsPerInvocation="520"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="135" invocations="50" avgMicrosecondsPerInvocation="2718" maxMicrosecondsPerInvocation="20917" standardDeviationMicrosecondsPerInvocation="4576"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="134" invocations="411" avgMicrosecondsPerInvocation="327" maxMicrosecondsPerInvocation="8872" standardDeviationMicrosecondsPerInvocation="739"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="132" invocations="411" avgMicrosecondsPerInvocation="322" maxMicrosecondsPerInvocation="22591" standardDeviationMicrosecondsPerInvocation="1896"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>
